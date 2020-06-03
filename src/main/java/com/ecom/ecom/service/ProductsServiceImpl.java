@@ -23,7 +23,7 @@ public class ProductsServiceImpl implements ProductsService {
     }
 
     @Override
-    public List<Products> findProductGroupBy(String groupByName) {
+    public List<String> findProductGroupBy(String groupByName) {
         switch (groupByName) {
             case "COLOR":
                 return productsRepository.findProductsGroupByColor();

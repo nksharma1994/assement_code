@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -35,6 +37,12 @@ public class SellerController {
         else {
             return new ResponseEntity<List<Seller>>(sellers, HttpStatus.NO_CONTENT);
         }
+    }
+    
+    @PostMapping("/sellers")
+    public ResponseEntity<Seller> addSeller(@RequestBody Seller seller){
+    	Seller response = sellerService.addSeller(seller);
+    	return new ResponseEntity<Seller>(response, HttpStatus.CREATED);
     }
 
 

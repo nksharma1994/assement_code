@@ -37,13 +37,13 @@ public class ProductController {
     }
 
     @GetMapping("/products/groupby/{groupName}")
-    public ResponseEntity<List<Products>> getProductGroupBy(@NotNull @NotBlank @PathVariable("groupName") String groupName){
-        List<Products> products = productsService.findProductGroupBy(groupName);
+    public ResponseEntity<List<String>> getProductGroupBy(@NotNull @NotBlank @PathVariable("groupName") String groupName){
+        List<String> products = productsService.findProductGroupBy(groupName);
         if(products!=null){
-            return new ResponseEntity<List<Products>>(products, HttpStatus.OK);
+            return new ResponseEntity<List<String>>(products, HttpStatus.OK);
         }
         else{
-            return new ResponseEntity<List<Products>>(products, HttpStatus.NO_CONTENT);
+            return new ResponseEntity<List<String>>(products, HttpStatus.NO_CONTENT);
         }
     }
 

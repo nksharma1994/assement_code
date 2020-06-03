@@ -70,7 +70,7 @@ public class DataGenerator {
         ClusterOneProducts clusterOneProducts1 = new ClusterOneProducts();
         clusterOneProducts.setName("Round Neck T-shirt");
         clusterOneProducts.setBrand("NIKE");
-        clusterOneProducts.setColor("Blue");
+        clusterOneProducts.setColor("BLUE");
         clusterOneProducts.setPrice(2000.00);
         clusterOneProducts.setSize("40");
         clusterOneProducts.setCategory(clusterOneCategory);

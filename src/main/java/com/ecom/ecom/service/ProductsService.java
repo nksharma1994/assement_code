@@ -8,6 +8,6 @@ public interface ProductsService {
 
     public List<Products> findAllProducts();
     public Products findProductsBySku(String sku);
-    public List<Products> findProductGroupBy(String groupBy);
+    public List<String> findProductGroupBy(String groupBy);
     public Long countProductsBySeller(int sellerId);
 }
